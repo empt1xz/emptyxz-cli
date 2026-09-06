@@ -1,0 +1,34 @@
+{
+  "name": "emptyxz",
+  "version": "0.0.2",
+  "description": "CLI para criar projetos Next.js",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "emptyxz": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts"
+  },
+  "keywords": [
+    "nextjs",
+    "next",
+    "cli",
+    "emptyxz"
+  ],
+  "files": [
+    "dist",
+    "template"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^8.7.1"
+  }
+}
