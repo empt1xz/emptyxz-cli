@@ -24,14 +24,14 @@ let projectName = args[1];
 if (command === "init") {
   if (!projectName) {
     projectName = await input({
-      message: "Qual será o nome do projeto?",
+      message: "What's name of your project?",
       validate(value) {
         if (!value.trim()) {
-          return "Informe um nome para o projeto.";
+          return "Enter a name for the project.";
         }
 
         if (!/^[a-zA-Z0-9-_]+$/.test(value)) {
-          return "Use apenas letras, números, hífen ou underscore.";
+          return "Use only letters, numbers, hyphens, or underscores.";
         }
 
         return true;
@@ -40,8 +40,8 @@ if (command === "init") {
   }
 
   console.log("");
-  console.log("✅ Criando projeto Next.js | by: Emptyxz.dev");
-  console.log(`📦 Nome do projeto: ${projectName}`);
+  console.log("✅ Creating project in Next.js | by: Emptyxz.dev");
+  console.log(`📦 Name of project: ${projectName}`);
   console.log("");
 
   const result = spawnSync(
@@ -66,7 +66,7 @@ if (command === "init") {
   );
 
   if (result.status !== 0) {
-    console.log("❌ Erro ao criar o projeto.");
+    console.log("❌ Error creating the project.");
 
     if (result.stderr) {
       console.log(result.stderr);
@@ -115,8 +115,8 @@ if (command === "init") {
     path.join(appPath, "favicon.ico"),
   );
 
-  console.log("✅ Template Emptyxz aplicado.");
-  console.log(`✅ Projeto criado com sucesso em ./${projectName}`);
+  console.log("✅ Template Emptyxz applied.");
+  console.log(`✅ Project successfully created in ./${projectName}`);
 } else {
   console.log("Emptyxz CLI");
 }
